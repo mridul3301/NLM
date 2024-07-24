@@ -16,6 +16,15 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+#### Create a new directory "data" and make two directories inside it "csv" and "text"
+```bash
+mkdir data
+cd data
+mkdir csv
+mkdir text
+cd ..
+```
+
 ### Tokenize the text data
 
 #### Make the script executable
