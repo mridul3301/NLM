@@ -7,9 +7,9 @@ __pycache__/
 *.so
 
 # Ignore files inside csv, speech and text directory
-/data/csv/*
-/data/speech/*
-/data/text/*
+#/data/csv/*
+#/data/speech/*
+#/data/text/*
 
 # Distribution / packaging
 .Python
