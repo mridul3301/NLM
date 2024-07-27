@@ -3,8 +3,8 @@
 # Define the paths and parameters
 CSV_DATA_PATH="./data/csv"
 TEXT_DATA_PATH="./data/text"
-TOKENIZER_PATH="./BPEtokenizer"
-VOCAB_SIZE=500
+TOKENIZER_PATH="./tokenizer/bpetokenizer_1k"
+VOCAB_SIZE=1000
 SPECIAL_TOKENS="<s>,<pad>,</s>,<unk>,<cls>,<sep>,<mask>"
 
 

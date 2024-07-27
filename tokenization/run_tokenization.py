@@ -20,7 +20,6 @@ def train_tokenizer(text_files_path, tokenizer_path, vocab_size, special_tokens)
 
     # Wrap in a PreTrainedTokenizerFast
     model_length = 512
-    fast_tokenizer = PreTrainedTokenizerFast(tokenizer_object=tokenizer, model_max_length=model_length)
     tokenizer.bos_token = "<s>"
     tokenizer.bos_token_id = tokenizer.token_to_id("<s>")
     tokenizer.pad_token = "<pad>"
@@ -35,6 +34,8 @@ def train_tokenizer(text_files_path, tokenizer_path, vocab_size, special_tokens)
     tokenizer.sep_token_id = tokenizer.token_to_id("<sep>")
     tokenizer.mask_token = "<mask>"
     tokenizer.mask_token_id = tokenizer.token_to_id("<mask>")
+    
+    fast_tokenizer = PreTrainedTokenizerFast(tokenizer_object=tokenizer, model_max_length=model_length, special_tokens=special_tokens)
     fast_tokenizer.save_pretrained(tokenizer_path)
     print(f"Tokenizer saved to {tokenizer_path}")
 
